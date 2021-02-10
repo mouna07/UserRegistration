@@ -51,7 +51,7 @@ public class UserRegistration {
     }
 
     public void passwordValidation(String passwoString) {
-        if (Pattern.matches("^(?=.*[A-Z]).{8,20}$", passwoString)) {
+        if (Pattern.matches("^(?=.*[A-Z])(?=.*[0-9]).{8,20}$", passwoString)) {
             System.out.println("Valid Password.");
         } else {
             System.out.println("Invalid Password.");

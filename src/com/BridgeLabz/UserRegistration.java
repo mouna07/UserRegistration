@@ -22,7 +22,6 @@ public class UserRegistration {
         System.out.println("Enter Password: ");
         userRegistration.passwordValidation(scanner.next());
         scanner.close();
-
     }
 
     public void nameValidation(String name) {
@@ -51,7 +50,7 @@ public class UserRegistration {
     }
 
     public void passwordValidation(String passwoString) {
-        if (Pattern.matches("^(?=.*[A-Z])(?=.*[0-9]).{8,20}$", passwoString)) {
+        if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$", passwoString)) {
             System.out.println("Valid Password.");
         } else {
             System.out.println("Invalid Password.");

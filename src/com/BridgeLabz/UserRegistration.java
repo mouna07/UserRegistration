@@ -18,8 +18,7 @@ public class UserRegistration {
         System.out.println("Enter Email id: ");
         userRegistration.emailValidation(scanner.next());
         System.out.println("Enter Phone Number: ");
-        userRegistration.mobileNumberValidation(scanner.nextLine());
-        scanner.next();
+        userRegistration.mobileNumberValidation(scanner.next());
 
     }
 

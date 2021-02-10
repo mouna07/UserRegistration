@@ -24,36 +24,44 @@ public class UserRegistration {
         scanner.close();
     }
 
-    public void nameValidation(String name) {
+    public String nameValidation(String name) {
         if (Pattern.matches("[A-Z][a-z]{2}[a-z]*", name)) {
             System.out.println("Valid Name");
+            return "Valid";
         } else {
             System.out.println("Invalid Name");
+            return "Invalid";
         }
     }
 
-    public void emaileValidation(String name) {
+    public String emaileValidation(String name) {
         String regex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z" + "A-Z]{2,7}$";
         if (Pattern.matches(regex, name)) {
             System.out.println("Valid Email Id");
+            return "Valid";
         } else {
             System.out.println("Invalid Email Id");
+            return "Invalid";
         }
     }
 
-    public void mobileNumberValidation(String num) {
+    public String mobileNumberValidation(String num) {
         if (Pattern.matches("^[1-9]{1,3}[ ]{1}[1-9]{1}[0-9]{9}$", num)) {
             System.out.println("Valid Phone Number.");
+            return "Valid";
         } else {
             System.out.println("Invalid Phone Number.");
+            return "Invalid";
         }
     }
 
-    public void passwordValidation(String passwoString) {
-        if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$", passwoString)) {
+    public String passwordValidation(String passwoString) {
+        if (Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-d+=()])(?=\\S+$).{8,20}$", passwoString)) {
             System.out.println("Valid Password.");
+            return "Valid";
         } else {
             System.out.println("Invalid Password.");
+            return "Invalid";
         }
     }
 }
